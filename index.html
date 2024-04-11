@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/gif" href="https://c.tenor.com/mKqTKeneyoMAAAAC/tenor.gif"/>
+<title>YOUR SYSTEM GET HACKED</title>
+<style>
+    body {
+        font-family: Tristan, sans-serif;
+        background-color: #000000;
+        background-image: url(https://steamuserimages-a.akamaihd.net/ugc/88220693549870844/9A5C231D64922F66E8E7B953CC5008CBE6AAA461/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+    #content1 {
+        text-align: center;
+        display: none;
+        color: darkblue;
+        position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+    }
+    #content1 h1, #content1 p {
+        font-family: 'Roboto', sans-serif;
+        animation: rainbow 5s linear infinite;
+    }
+
+    @keyframes rainbow {
+        0% { color: red; }
+        20% { color: orange; }
+        40% { color: yellow; }
+        60% { color: green; }
+        80% { color: blue; }
+        100% { color: purple; }
+    }
+</style>
+</head>
+<body>
+<audio id="myAudio" autoplay loop>
+  <source src="https://docs.google.com/uc?export=download&id=1Hx-gy4Gumb6KRARySOAI5CicQVEvRpFc" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<canvas id="c"></canvas>
+<div id="content1">
+    <h1>Your Site Hacked</h1>
+    <p>by</p>
+    <p>1has</p>
+</div>
+
+<script> 
+var c = document.getElementById("c"); 
+var ctx = c.getContext("2d"); 
+   
+c.height = window.innerHeight; 
+c.width = window.innerWidth; 
+   
+var chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";  
+chinese = chinese.split(""); 
+  
+var font_size = 18; 
+var columns = c.width/font_size;  
+var drops = []; 
+for(var x = 0; x < columns; x++) 
+    drops[x] = 1;  
+  
+ 
+function draw() 
+{ 
+     
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; 
+    ctx.fillRect(0, 0, c.width, c.height); 
+     
+    ctx.fillStyle = "#0F0";  
+    ctx.font = font_size + "px arial"; 
+    for(var i = 0; i < drops.length; i++) 
+    { 
+         
+        var text = chinese[Math.floor(Math.random()*chinese.length)]; 
+         
+        ctx.fillText(text, i*font_size, drops[i]*font_size); 
+         
+         
+        if(drops[i]*font_size > c.height && Math.random() > 0.975) 
+            drops[i] = 0; 
+         
+         
+        drops[i]++; 
+    } 
+} 
+  
+setInterval(draw, 33); 
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var contentDiv = document.getElementById("content1");
+    setTimeout(function() {
+        contentDiv.style.display = "block";
+        setInterval(function() {
+            contentDiv.style.display = "none";
+            setTimeout(function() {
+                contentDiv.style.display = "block";
+            }, 3000); 
+        }, 10000); 
+    }, 1000); 
+});
+</script>
+</body>
+</html>
